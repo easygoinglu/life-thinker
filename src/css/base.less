@@ -1,0 +1,185 @@
+@masthead-header-height: 42px;
+@panel-padding: 20px;
+
+.clearfix::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.bold-font{
+  font-weight: bold;
+}
+
+.menu{
+  background-color: #000000;
+
+  .menu-items{
+    list-style: none;   
+    padding:10px 0;
+
+    .menu-item{
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover{
+        background: #C0C0C0;
+      }
+
+      &:active{
+        background: #C0C0C0;
+      }
+
+      .menu-item-link{
+        text-decoration: none;
+        color: #FFFFFF;
+
+        &.active{
+          color: #FFD700;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  background-color: #FFFFFF;  
+  will-change: auto;
+  height: 100vh;
+
+  &:before {
+    content: "";
+    display: block;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &.panel-open:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99;
+  }      
+
+  header{
+    height: @masthead-header-height;     
+
+    .masthead{ 
+      position: fixed;
+      width: 100%;
+      z-index: 98;
+      padding: 5px;
+      background-color: #FFFFE0;  
+      border: 1px solid #EEE8AA;          
+    }
+  }
+
+  .panel{
+    padding: @panel-padding;
+    line-height: 2em;
+  }
+}
+
+#home{
+  h1{
+    text-align: center;
+    line-height: calc(~"100vh" - (@panel-padding + @panel-padding + @masthead-header-height));    
+    margin: 0;  //clear h1 margin of normalize.css 
+  }
+}
+
+#mottos{
+  padding: 0 15%;
+
+  .add-motto-btn{
+    .btn;
+    color: #FF8000;
+    float: right;
+  }
+
+  .motto-list{
+    padding-top: 20px;
+
+    .motto{
+      list-style: none; 
+      margin: 35px 0;
+
+      .proverb{
+        font-weight: bold;
+        font-size: 1.5em;
+        margin: 5px 0;
+      }
+
+      .author{
+        float: right;
+        font-style: italic;
+      }
+    }     
+  }
+}
+
+#add-motto{
+  .save-motto-btn{
+    .btn;
+    margin-top: 10px;
+  }
+}
+
+#add-activity{
+
+  .calendar-container{
+    z-index: 1;
+    position: absolute;
+
+    &.hide{
+        top: -9999px;
+    }
+  }
+
+  .save-activity-btn{
+    .btn;
+    margin-top: 10px;
+  }  
+}
+
+#activities{
+  padding: 0 15%;
+
+  .add-activity-btn{
+    .btn;
+    color: #FF8000;
+    float: right;
+  }
+
+  .activity{
+    margin: 20px 0;
+    border: 1px solid #E6E6E6;
+    border-radius: 15px 15px 0 0;
+
+    .date{
+      background-color: #E6E6E6;
+      border-radius: 13px 13px 0 0;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    div{
+      padding: 10px;
+    }
+  } 
+}
+
+#journey{
+  .journey-chart{
+    min-width: 300px;
+    height: 300px;
+  }
+}
+
