@@ -2,7 +2,9 @@
 
 ## Introduction
     
-   recall touching moments of life
+   recall touching moments of life 
+   
+   [Demo site](https://life-thinker.herokuapp.com)
 
 ## Installation
   
