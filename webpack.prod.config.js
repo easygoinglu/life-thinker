@@ -1,12 +1,25 @@
-var path = require("path");
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
      path: path.resolve(__dirname, "dist"),
-     publicPath: "/public/",
-     filename: "app.bundle.js",
+     filename: "app.bundle.js"
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      "process.env": {
+        "NODE_ENV": JSON.stringify("production")
+      }
+    })
+  ],  
   module: {
     loaders: [{
       test: /\.js$/,
@@ -26,5 +39,5 @@ module.exports = {
       loader: "url-loader?limit=100000&outputPath=img/"
     }]
   },
-  devtool: "eval"
+  devtool: "#source-map"
 };

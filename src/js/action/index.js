@@ -16,7 +16,7 @@ function receiveMotto(mottos){
 
 export function fetchMotto(){
   return dispatch => {
-    return axios.get("http://localhost:8080/src/data/mottos.json")
+    return axios.get("./data/mottos.json")
              .then(response => {dispatch(receiveMotto(response.data.mottos))})
              .catch(function(error){
                if(error.response){
@@ -46,7 +46,7 @@ function receiveActivity(activityData){
 
 export function fetchActivity(){
   return dispatch => {
-    return axios.get("http://localhost:8080/src/data/activities.json")
+    return axios.get("./data/activities.json")
              .then(response => {dispatch(receiveActivity(response.data.activities))})
              .catch(function(error){
                if(error.response){
@@ -69,7 +69,7 @@ function receiveJourney(journey){
 
 export function fetchJourney(){
   return dispatch => {
-    return axios.get("http://localhost:8080/src/data/journey.json")
+    return axios.get("./data/journey.json")
              .then(response => {dispatch(receiveJourney(response.data.journey))})
              .catch(function(error){
                if(error.response){
