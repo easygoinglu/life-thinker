@@ -17,7 +17,7 @@
     ```  
 
     ```bash
-    npm start
+    npm run start-prod
     ```  
   
   1. connect to http://localhost:8080/
