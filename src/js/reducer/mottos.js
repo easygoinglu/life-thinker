@@ -7,7 +7,7 @@ const mottos = (state = [], action) => {
     case "ADD_MOTTO": 
       motto = _.map(state, _.clone);
       motto.push(action.data);
-      return mottos;
+      return motto;
     case "RECEIVE_MOTTO":
       return action.data
     default:
