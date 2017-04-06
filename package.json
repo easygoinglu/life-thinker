@@ -4,10 +4,10 @@
   "description": "recall touching moments of life",
   "main": "index.js",
   "scripts": {
-    "postinstall": "webpack --config ./webpack.prod.config.js",  
-    "start": "node server.js", 
-    "start-prod" : "webpack --config ./webpack.prod.config.js && webpack-dev-server --history-api-fallback", 
-    "start-dev": "webpack  --config ./webpack.config.js --progress --colors && webpack-dev-server --content-base dist/ --history-api-fallback",  
+    "postinstall": "webpack --config ./webpack.prod.config.js",
+    "start": "node server.js",
+    "start-prod": "webpack --config ./webpack.prod.config.js && webpack-dev-server --history-api-fallback",
+    "start-dev": "webpack  --config ./webpack.config.js --progress --colors && webpack-dev-server --content-base dist/ --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src"
   },
@@ -48,9 +48,8 @@
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-infinite-calendar": "^2.1.5",
-    "react-redux": "^5.0.2",
+    "react-redux": "^5.0.3",
     "react-router": "^3.0.2",
-    "redux": "^3.6.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
     "slideout": "^1.0.1"

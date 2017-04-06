@@ -15,7 +15,8 @@ import Journey from "./js/container/Journey";
 import reducer from "./js/reducer";
 
 const logger = createLogger();
-const store = createStore(reducer, compose(applyMiddleware(thunk, logger), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+// const store = createStore(reducer, compose(applyMiddleware(thunk, logger), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const store = createStore(reducer, compose(applyMiddleware(thunk, logger)));
 
 render((
   <Provider store={store}>
