@@ -3,8 +3,7 @@ import {browserHistory} from "react-router";
 import Slideout from "slideout";
 import "normalize.css";
 import "font-awesome/css/font-awesome.css";
-import "slideout/index.css";
-import "../../css/base.less";
+import "../../css/style.less";
 import NavLink from "./NavLink"
 
 class App extends Component{
@@ -71,7 +70,7 @@ class App extends Component{
         <div className="container">
           <header>
             <div className="masthead">
-              <i className="btn menu-btn fa fa-align-justify fa-2x"/>
+              <i className="btn menu-btn fa fa-bars"/>
             </div>  
           </header>        
           <main className="panel">         

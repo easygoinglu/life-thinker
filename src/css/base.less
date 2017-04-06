@@ -19,20 +19,23 @@
   background-color: #000000;
 
   .menu-items{
+    margin: 0;
+    padding: 10px 0;
+    text-align: right;
     list-style: none;   
-    padding:10px 0;
 
     .menu-item{
+      display: inline-block;
       padding: 10px 20px;
       cursor: pointer;
 
       &:hover{
-        background: #C0C0C0;
-      }
-
+        background: #000000;
+      }   
+      
       &:active{
-        background: #C0C0C0;
-      }
+        background: #000000;
+      }  
 
       .menu-item-link{
         text-decoration: none;
@@ -69,7 +72,8 @@
   }      
 
   header{
-    height: @masthead-header-height;     
+    height: @masthead-header-height; 
+    display: none;       
 
     .masthead{ 
       position: fixed;
@@ -78,6 +82,10 @@
       padding: 5px;
       background-color: #FFFFE0;  
       border: 1px solid #EEE8AA;          
+    }
+
+    .menu-btn{
+      font-size: 7vmin;
     }
   }
 
@@ -89,6 +97,7 @@
 
 #home{
   h1{
+    font-size: 3vw;
     text-align: center;
     line-height: calc(~"100vh" - (@panel-padding + @panel-padding + @masthead-header-height));    
     margin: 0;  //clear h1 margin of normalize.css 
@@ -96,29 +105,32 @@
 }
 
 #mottos{
-  padding: 0 15%;
+  padding: 0 10%;
 
   .add-motto-btn{
     .btn;
+    font-size: 10vmin;
     color: #FF8000;
     float: right;
   }
 
   .motto-list{
-    padding-top: 20px;
+    padding-left: 0;
+    padding-top: 10px;
 
     .motto{
       list-style: none; 
-      margin: 35px 0;
+      margin: 10px 0;
 
       .proverb{
         font-weight: bold;
-        font-size: 1.5em;
+        font-size: 1.5vw;
         margin: 5px 0;
       }
 
       .author{
         float: right;
+        font-size: 1vw;
         font-style: italic;
       }
     }     
@@ -154,6 +166,7 @@
 
   .add-activity-btn{
     .btn;
+    font-size: 10vmin;
     color: #FF8000;
     float: right;
   }
