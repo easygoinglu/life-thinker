@@ -6,8 +6,11 @@
    
    [Demo site](https://life-thinker.herokuapp.com)
 
-   ![life-thinker in action](https://github.com/easygoinglu/life-thinker/master/readme-screen-big.png)
-   ![life-thinker in action](https://github.com/easygoinglu/life-thinker/master/readme-screen-RWD.png)
+   * life-thinker(big screen)
+   ![life-thinker(big screen) in action](https://github.com/easygoinglu/life-thinker/blob/master/readme-screen-big.png)
+    
+   * life-thinker(small screen) 
+   ![life-thinker(small screen) in action](https://github.com/easygoinglu/life-thinker/blob/master/readme-screen-small.png)
 
 ## Installation
   
