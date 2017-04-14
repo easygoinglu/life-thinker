@@ -7,10 +7,10 @@
    [Demo site](https://life-thinker.herokuapp.com)
 
    * life-thinker(big screen)
-   ![life-thinker(big screen) in action](./readme-screen-big.png)
+      ![life-thinker(big screen) in action](./readme-screen-big.png)
     
    * life-thinker(small screen)
-   <img src="readme-screen-small.png" height="500" />
+      <img src="readme-screen-small.png" height="500" />
 
 ## Installation
   
