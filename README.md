@@ -6,6 +6,9 @@
    
    [Demo site](https://life-thinker.herokuapp.com)
 
+   ![life-thinker in action](https://github.com/easygoinglu/life-thinker/master/readme-screen-big.png)
+   ![life-thinker in action](https://github.com/easygoinglu/life-thinker/master/readme-screen-RWD.png)
+
 ## Installation
   
  1. execute below commands
@@ -32,3 +35,5 @@
 * webpack
 * react-infinite-calendar
 * slideout
+* scrollmagic
+* highchart
