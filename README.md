@@ -10,7 +10,8 @@
    ![life-thinker(big screen) in action](./readme-screen-big.png)
     
    * life-thinker(small screen)
-   ![ife-thinker(small screen) in action](./readme-screen-small.png | width=800)
+   ![life-thinker(small screen) in action](./readme-screen-small.png)
+   ![life-thinker(small screen) in action](./readme-screen-small.png =250x250)
 
 ## Installation
   
