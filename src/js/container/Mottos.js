@@ -2,6 +2,8 @@ import React, {Component, PropTypes} from "react";
 import {connect} from "react-redux";
 import {browserHistory} from "react-router";
 import {fetchMotto} from "../action";
+import Lang from "../../lang/Lang";
+
   
 class Mottos extends Component{
   
@@ -36,7 +38,7 @@ class Mottos extends Component{
               return (
                 <li key={index} className="motto clearfix">
                   <div className="proverb">{motto.proverb}</div>
-                  <div className="author">{motto.author && motto.author.length > 0 && `~ ${motto.author}` || "~ Unknown"}</div>
+                  <div className="author">{motto.author && motto.author.length > 0 && `~ ${motto.author}` || `~ ${Lang.getL10N("unknown")}`}</div>
                 </li>
               )
             })

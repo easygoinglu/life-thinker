@@ -3,6 +3,8 @@ import {connect} from "react-redux";
 import {browserHistory} from "react-router";
 import {fetchActivity} from "../action";
 import Label from "../component/Label";
+import Lang from "../../lang/Lang";
+
   
 class Activities extends Component{
   
@@ -35,9 +37,9 @@ class Activities extends Component{
             return(  
               <div key={index} className="activity">
                 <div className="date">{activity.date}</div>
-                <div><Label>Grade: </Label>{activity.grade}</div>              
-                <div><Label>Activity: </Label>{activity.activity}</div>
-                <div><Label>Description: </Label>{activity.description}</div>
+                <div><Label>{Lang.getL10N("grade")}</Label>{activity.grade}</div>              
+                <div><Label>{Lang.getL10N("activity")}</Label>{activity.activity}</div>
+                <div><Label>{Lang.getL10N("description")}</Label>{activity.description}</div>
               </div>
             )
           })

@@ -1,4 +1,4 @@
-var util = {
+const util = {
   date: {
     format: function(date){
       return [date.getFullYear(), date.getMonth(), date.getDate()].join("/")

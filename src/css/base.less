@@ -1,6 +1,6 @@
 @masthead-header-height: 42px;
 @panel-padding: 20px;
-
+/**ttest**/
 .clearfix::after{
   display: table;
   content: "";
@@ -13,6 +13,21 @@
 
 .bold-font{
   font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+    transform: scale(.1);
+  }
+  100% {
+    opacity: 1.0;
+    transform: scale(1);   
+  }
 }
 
 .menu{
@@ -141,6 +156,73 @@
   .save-motto-btn{
     .btn;
     margin-top: 10px;
+  }
+}
+
+#profile{
+  .info{
+    text-align: center;
+
+    .photo{
+      width: 200px;
+      height: 200px;
+      background-size: 200px;     
+      background-image: url(../img/thinker.svg);
+      display: inline-block;
+    }
+  }
+
+  .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+    .item{
+      position: relative;   
+      width: 250px;
+      height: 250px;   
+      background-color: #FAFAD2;
+      margin: 20px;
+      overflow: hidden;
+      box-shadow: 7px -7px #DCDCDC;
+      border-radius: 7px;
+      opacity: 0;
+
+      &.show{  
+        animation: fadeIn 0.5s 1;        
+        opacity: 1;
+      }
+
+      &:hover{
+        transform: scale(1.1);   
+        transition: all .3s;
+      }
+
+      .item-image{
+        height: 100%;
+        min-width: 100%;
+      }
+
+      .item-name{
+        position: absolute;
+        top: 0;
+        opacity: 0.6;
+        font-size: 2em;
+        margin: 10px;
+        color: #FFFFFF;
+        .bold-font;
+      }
+    }
+  }
+
+  .loader{    
+    text-align: center;
+
+    &.hide{
+      .hide;
+    }
   }
 }
 

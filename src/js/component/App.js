@@ -5,6 +5,7 @@ import "normalize.css";
 import "font-awesome/css/font-awesome.css";
 import "../../css/style.less";
 import NavLink from "./NavLink"
+import Lang from "../../lang/Lang";
 
 class App extends Component{
   constructor(props){
@@ -61,10 +62,11 @@ class App extends Component{
       <section>
         <nav className="menu">
           <ul className="menu-items" onClick={this.handleMenuClick}>
-            <li className="menu-item" data-id="home"><NavLink className="menu-item-link" to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
-            <li className="menu-item" data-id="motto"><NavLink className="menu-item-link" to="/motto">Motto</NavLink></li>
-            <li className="menu-item" data-id="activity"><NavLink className="menu-item-link" to="/activity">Activity</NavLink></li>
-            <li className="menu-item" data-id="journey"><NavLink className="menu-item-link" to="/journey">Journey</NavLink></li>
+            <li className="menu-item" data-id="home"><NavLink className="menu-item-link" to="/" onlyActiveOnIndex={true}>{Lang.getL10N("home")}</NavLink></li>
+            <li className="menu-item" data-id="motto"><NavLink className="menu-item-link" to="/motto">{Lang.getL10N("motto")}</NavLink></li>
+            <li className="menu-item" data-id="profile"><NavLink className="menu-item-link" to="/profile">{Lang.getL10N("profile")}</NavLink></li>
+            <li className="menu-item" data-id="activity"><NavLink className="menu-item-link" to="/activity">{Lang.getL10N("activity")}</NavLink></li>
+            <li className="menu-item" data-id="journey"><NavLink className="menu-item-link" to="/journey">{Lang.getL10N("journey")}</NavLink></li>
           </ul>
         </nav>
         <div className="container">

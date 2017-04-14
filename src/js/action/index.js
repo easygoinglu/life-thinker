@@ -30,6 +30,30 @@ export function fetchMotto(){
   };
 }
 
+function receiveProfile(profile){
+  return {
+    type: "RECEIVE_PROFILE",
+    data: profile
+  }
+}
+
+export function fetchProfile(callback){
+  return dispatch => {
+    return axios.get("./data/profile.json")
+             .then(response => {dispatch(receiveProfile(response.data.profile))})
+             .then(callback)
+             .catch(function(error){
+               if(error.response){
+                 console.log(error.response.data);
+                 console.log(error.response.status);
+                 console.log(error.response.headers);
+               }else{
+                 console.log("Error", error.message);
+               }
+             });
+  };
+}
+
 export function addActivity(activityData){
   return {
     type: "ADD_Activity",

@@ -9,6 +9,7 @@ import App from "./js/component/App";
 import Home from "./js/component/Home";
 import Mottos from "./js/container/Mottos";
 import AddMotto from "./js/container/AddMotto";
+import Profile from "./js/container/Profile";
 import Activities from "./js/container/Activities";
 import AddActivities from "./js/container/AddActivities";
 import Journey from "./js/container/Journey";
@@ -26,6 +27,7 @@ render((
         <Route path="/home" component={Home}/>
         <Route path="/motto" component={Mottos}/>
         <Route path="/motto/add" component={AddMotto}/>
+        <Route path="/profile" component={Profile}/>
         <Route path="/activity" component={Activities}/>
         <Route path="/activity/add" component={AddActivities}/>     
         <Route path="/journey" component={Journey}/>

@@ -4,8 +4,8 @@ import {browserHistory} from "react-router";
 import InfiniteCalendar from "react-infinite-calendar";
 import "react-infinite-calendar/styles.css";
 import {addActivity} from "../action";
-import util from "../util"
-import Label from "../component/Label";
+import util from "../util";
+import Lang from "../../lang/Lang";
 
 
 class AddActivities extends Component{
@@ -63,7 +63,7 @@ class AddActivities extends Component{
           dispatch(addActivity({date: this.date.value, activity: this.activity.value, description: this.description.value, grade: this.grade.value}));
           browserHistory.push("/activity");  
         }}>      
-          <div>Date: <input type="text" readOnly ref={node => {this.date = node}} onClick={this.handleCalendar}/></div>
+          <div>{Lang.getL10N("date")}<input type="text" readOnly ref={node => {this.date = node}} onClick={this.handleCalendar}/></div>
           <div className="calendar-container hide" ref={node => {this.calendarContainer = node}}>
             <InfiniteCalendar
               className="calendar"
@@ -76,7 +76,7 @@ class AddActivities extends Component{
             Activity: <input type="text" ref={node => {this.activity = node}} />
           </div>
           <div>
-            <div>Description: </div>
+            <div>{Lang.getL10N("description")}</div>
             <textarea rows="4" cols="50" ref={node => {this.description = node}}></textarea>
           </div>
           <div>
@@ -94,7 +94,7 @@ class AddActivities extends Component{
               <option>10</option>
             </select>
           </div>
-          <button type="submit" className="btn save-activity-btn">Save</button>
+          <button type="submit" className="btn save-activity-btn">{Lang.getL10N("save")}</button>
         </form>
       </section>);
   }

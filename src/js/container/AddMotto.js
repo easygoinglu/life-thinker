@@ -2,8 +2,7 @@ import React, {PropTypes} from "react";
 import {connect} from "react-redux";
 import {browserHistory} from "react-router";
 import {addMotto} from "../action";
-import Label from "../component/Label";
-
+import Lang from "../../lang/Lang";
   
 let AddMotto = ({ dispatch }) => {
   let proverb, 
@@ -22,14 +21,14 @@ let AddMotto = ({ dispatch }) => {
         browserHistory.push("/motto");  
       }}>
         <div>
-          <div>Author:</div>
+          <div>{Lang.getL10N("author")}</div>
           <input ref={node => {author = node}} />
         </div>      
         <div>
-          <div>Proverb: </div>
+          <div>{Lang.getL10N("proverb")}</div>
           <textarea rows="4" cols="50" ref={node => {proverb = node}}></textarea>
         </div>
-        <button type="submit" className="save-motto-btn">Save</button>
+        <button type="submit" className="save-motto-btn">{Lang.getL10N("save")}</button>
       </form>
     </section>
   )
