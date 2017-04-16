@@ -40,7 +40,7 @@ class Profile extends Component{
     let controller = new ScrollMagic.Controller();
     let loaderScene = new ScrollMagic.Scene({triggerElement: document.querySelector(".loader"), triggerHook: "onEnter"})
       .on("enter", function () {
-        if (!document.querySelector(".loader").classList.contains("active")) {
+        if (document.querySelector(".loader") && !document.querySelector(".loader").classList.contains("active")) {
           setTimeout(this.addItems.apply(this, [10]), 1000);
         }
       }.bind(this));  
