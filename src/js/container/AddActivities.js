@@ -29,22 +29,22 @@ class AddActivities extends Component{
   handleCalendar(e){
     e.stopPropagation();
 
-    if(this.calendarContainer.classList.contains("hide")){
-      this.calendarContainer.classList.remove("hide");
+    if(this.calendarContainer.classList.contains("invisible")){
+      this.calendarContainer.classList.remove("invisible");
     }else{
-      this.calendarContainer.classList.add("hide");
+      this.calendarContainer.classList.add("invisible");
     }
   }
 
   closeCalendar(){
-    if(!this.calendarContainer.classList.contains("hide")){
-      this.calendarContainer.classList.add("hide");
+    if(!this.calendarContainer.classList.contains("invisible")){
+      this.calendarContainer.classList.add("invisible");
     }
   }
 
   selectDate(date){
     this.date.value = util.date.format(date);
-    this.calendarContainer.classList.add("hide");    
+    this.calendarContainer.classList.add("invisible");    
   }
 
   render(){
@@ -63,8 +63,8 @@ class AddActivities extends Component{
           dispatch(addActivity({date: this.date.value, activity: this.activity.value, description: this.description.value, grade: this.grade.value}));
           browserHistory.push("/activity");  
         }}>      
-          <div>{Lang.getL10N("date")}<input type="text" readOnly ref={node => {this.date = node}} onClick={this.handleCalendar}/></div>
-          <div className="calendar-container hide" ref={node => {this.calendarContainer = node}}>
+          <div>{Lang.getL10N("date")} <input type="text" readOnly ref={node => {this.date = node}} onClick={this.handleCalendar}/></div>
+          <div className="calendar-container invisible" ref={node => {this.calendarContainer = node}}>
             <InfiniteCalendar
               className="calendar"
               width={360}
@@ -73,14 +73,14 @@ class AddActivities extends Component{
               onSelect={this.selectDate}/>
           </div>
           <div>
-            Activity: <input type="text" ref={node => {this.activity = node}} />
+            {Lang.getL10N("activity")} <input type="text" ref={node => {this.activity = node}} />
           </div>
           <div>
             <div>{Lang.getL10N("description")}</div>
             <textarea rows="4" cols="50" ref={node => {this.description = node}}></textarea>
           </div>
           <div>
-            Grade: 
+            {Lang.getL10N("grade")} 
             <select ref={node => {this.grade = node}}>
               <option>1</option>
               <option>2</option>
