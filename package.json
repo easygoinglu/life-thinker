@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "compression": "^1.6.2",
     "express": "^4.15.2",
     "highcharts": "^5.0.7",
     "lodash": "^4.17.4",

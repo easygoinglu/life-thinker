@@ -11,7 +11,7 @@
     
    * life-thinker(small screen)
     <div style="padding-left:30px">
-      <img src="readme-screen-small.png" height="500" />
+      <img src="readme-screen-small.png" height="450" />
     </div>
 
 ## Installation
