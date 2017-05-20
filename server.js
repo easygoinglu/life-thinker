@@ -1,15 +1,20 @@
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { match, RouterContext } from "react-router";
+import route from "./src/js/route.js";
+
 const path = require("path");
 const express = require("express");
 var compression = require("compression");
 const app = express();
 const port = (process.env.PORT || 8080)
-const indexPath = path.join(__dirname, "index.html");
+// const indexPath = path.join(__dirname, "index.html");
 
 app.use(compression());
 app.use(express.static(__dirname ));
 
 app.get("*", (req, res) => {
-  match({ routes: routes, location: req.url }, (err, redirect, props) => {
+  match({ routes: route, location: req.url }, (err, redirect, props) => {
     // in here we can make some decisions all at once
     if (err) {
       // there was an error somewhere during route matching
