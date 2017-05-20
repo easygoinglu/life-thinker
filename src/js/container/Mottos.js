@@ -23,7 +23,7 @@ class Mottos extends Component{
   }
 
   addMottoClick(){
-    browserHistory.push("/motto/add");  
+    browserHistory.push("/addMotto");  
   }
 
   render(){

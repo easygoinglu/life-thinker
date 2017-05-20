@@ -22,7 +22,7 @@ class Activities extends Component{
   }
 
   addActivityClick(){
-    browserHistory.push("/activity/add");  
+    browserHistory.push("/addActivity");  
   }
 
   render(){

@@ -14,9 +14,9 @@ export default (
     <IndexRoute component={Home}/>
     <Route path="/home" component={Home}/>
     <Route path="/motto" component={Mottos}/>
-    <Route path="/motto/add" component={AddMotto}/>
+    <Route path="/addMotto" component={AddMotto}/>
     <Route path="/profile" component={Profile}/>
     <Route path="/activity" component={Activities}/>
-    <Route path="/activity/add" component={AddActivities}/>     
+    <Route path="/addActivity" component={AddActivities}/>     
     <Route path="/journey" component={Journey}/>
   </Route>);
