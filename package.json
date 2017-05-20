@@ -8,7 +8,6 @@
     "start": "node server.js",
     "start-prod": "webpack --config ./webpack.prod.config.js && webpack-dev-server --history-api-fallback",
     "start-dev": "webpack  --config ./webpack.config.js --progress --colors && webpack-dev-server --content-base dist/ --history-api-fallback",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src"
   },
   "author": "",
